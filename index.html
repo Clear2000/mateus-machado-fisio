@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mateus Machado · Fisioterapia domiciliar e clínica</title>
+<meta name="description" content="Fisioterapia em casa e no consultório com Mateus Machado. Idosos, pós-operatório, dores na coluna, ombro e joelho. Agende sua avaliação pelo WhatsApp.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0C1712">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#0C1712; --verde-2:#14241C; --verde-3:#1D3329;
+  --ouro:#B8955A; --ouro-2:#D2B47E;
+  --creme:#F5F0E6; --creme-2:#EAE2D2;
+  --ink:#16201B; --ink-2:#5B6660;
+  --gut:clamp(16px,4vw,56px); --max:1240px; --r:6px;
+  --serif:"Cormorant Garamond",Georgia,serif; --mark:"Italiana",Georgia,serif; --body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--creme);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.02}
+h2{font-size:clamp(40px,5.4vw,72px)}
+h2 em,h1 em{font-style:italic;color:var(--ouro)}
+h2 em{white-space:nowrap}
+.lead{font-size:clamp(17px,1.45vw,19px);color:var(--ink-2);max-width:34em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:999px;font-weight:600;font-size:16px;white-space:nowrap;transition:background .25s,color .25s,transform .2s}
+.btn:active{transform:scale(.97)}
+.btn-ouro{background:var(--ouro);color:var(--verde)}.btn-ouro:hover{background:var(--ouro-2)}
+.btn-verde{background:var(--verde);color:var(--creme)}.btn-verde:hover{background:var(--verde-3)}
+.btn-line{box-shadow:inset 0 0 0 1px currentColor}
+.btn svg{width:20px;height:20px;flex:none}
+
+header.top{position:sticky;top:0;z-index:40;background:var(--verde);color:var(--creme);border-bottom:1px solid rgba(184,149,90,.22)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.mark{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.mark svg{height:46px;width:17px;flex:none}
+.mark b{display:block;font:400 24px/1 var(--mark);letter-spacing:.08em;color:var(--ouro)}
+.mark small{display:block;font:400 15px/1 var(--mark);color:var(--ouro-2);margin-top:6px;letter-spacing:.04em}
+nav.links{display:flex;gap:30px;font-size:15px;font-weight:500;color:#C9CFC9}
+nav.links a:hover{color:var(--ouro-2)}
+header.top .btn{height:46px;padding:0 20px;font-size:15px}
+
+.hero{background:var(--verde);color:var(--creme);overflow:hidden;position:relative}
+.hero .wrap{position:relative;z-index:1}
+.wm{position:absolute;left:38%;top:-6%;height:118%;width:auto;aspect-ratio:60/170;color:var(--ouro);opacity:.06;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,6vw,96px);align-items:center;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(64px,8vw,112px)}
+.hero h1{font-size:clamp(36px,4.9vw,68px);color:var(--creme)}
+.hero h1 .l{display:block;white-space:nowrap}
+.hero .lead{color:#C8CFC9;margin-top:30px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.hero .btn-line{color:var(--creme)}
+.cred{display:flex;gap:28px;flex-wrap:wrap;margin-top:46px;padding-top:24px;border-top:1px solid rgba(184,149,90,.25);font-size:14px;color:#AEB7B1}
+.cred b{display:block;color:var(--ouro-2);font-weight:600;font-size:15px}
+.portrait{position:relative;justify-self:end;width:min(100%,470px)}
+.portrait::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:1px solid var(--ouro);border-radius:var(--r)}
+.portrait img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:var(--r)}
+.portrait .sig{position:absolute;left:-28px;bottom:36px;background:var(--creme);color:var(--verde);padding:16px 20px;border-radius:var(--r);max-width:250px}
+.portrait .sig b{display:block;font:500 24px/1.05 var(--serif)}
+.portrait .sig span{font-size:13px;color:var(--ink-2)}
+
+.formas{padding:clamp(80px,10vw,140px) 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.formas .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(16px,2.4vw,32px)}
+.forma{position:relative;border-radius:var(--r);overflow:hidden;background:var(--verde);color:var(--creme);display:flex;flex-direction:column}
+.forma img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.forma:nth-child(2) img{aspect-ratio:4/3.2}
+.forma .b{padding:clamp(22px,2.6vw,34px);display:flex;flex-direction:column;gap:12px;flex:1}
+.forma h3{font-size:clamp(32px,3.2vw,44px)}
+.forma p{color:#C8CFC9}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.tags span{font-size:13px;padding:6px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(184,149,90,.5);color:var(--ouro-2)}
+
+.faixa{position:relative;color:var(--creme);overflow:hidden;min-height:min(78vh,640px);display:flex;align-items:flex-end}
+.faixa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.faixa::before{content:"";position:absolute;inset:0;background:rgba(12,23,18,.52);z-index:1}
+.faixa .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:clamp(48px,7vw,96px)}
+.faixa p{font:500 clamp(40px,5.6vw,80px)/1.02 var(--serif);max-width:12em}
+.faixa p em{font-style:italic;color:var(--ouro-2)}
+.faixa span{display:inline-block;margin-top:22px;font-size:15px;letter-spacing:.04em;color:#D9DED9;padding-top:16px;border-top:1px solid var(--ouro)}
+.dor{background:var(--verde-2);color:var(--creme);padding:clamp(80px,10vw,140px) 0}
+.dor h2{color:var(--creme)}
+.dor .lead{color:#C8CFC9}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:38px 0 34px}
+.chip{height:48px;padding:0 22px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(245,240,230,.25);font-weight:600;font-size:15px;transition:background .25s,color .25s,box-shadow .25s}
+.chip:focus:not(:focus-visible){outline:none}
+.chip:hover{box-shadow:inset 0 0 0 1px var(--ouro)}
+.chip[aria-selected=true]{background:var(--ouro);color:var(--verde);box-shadow:none}
+.panel{display:grid;grid-template-columns:1fr 1.05fr;background:var(--creme);color:var(--ink);border-radius:var(--r);overflow:hidden;min-height:440px}
+.panel .pic{position:relative;overflow:hidden}
+.panel .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s ease}
+.panel .txt{padding:clamp(26px,4vw,56px);display:flex;flex-direction:column}
+.panel h3{font-size:clamp(34px,3.6vw,52px);color:var(--verde)}
+.panel .q{margin-top:14px;font-size:17px;color:var(--ink-2)}
+.panel ul{list-style:none;margin:24px 0 30px;display:grid;gap:12px}
+.panel li{display:grid;grid-template-columns:22px 1fr;gap:12px;font-size:16px}
+.panel li::before{content:"";width:14px;height:1px;background:var(--ouro);margin-top:13px}
+.panel .btn{margin-top:auto;align-self:flex-start;white-space:normal;text-align:center;height:auto;min-height:56px;padding:12px 28px}
+.panel .fade{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+
+.passos{padding:clamp(80px,10vw,140px) 0}
+.passos .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.passos .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.passos .pics img{width:100%;object-fit:cover;border-radius:var(--r)}
+.passos .pics img:first-child{grid-column:span 2;aspect-ratio:16/10}
+.passos .pics img:not(:first-child){aspect-ratio:1}
+ol.steps{list-style:none;margin-top:36px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:70px 1fr;gap:10px;padding:22px 0;border-top:1px solid var(--creme-2)}
+ol.steps li::before{content:"0" counter(s);font:500 40px/1 var(--serif);color:var(--ouro)}
+ol.steps b{display:block;font:600 26px/1.1 var(--serif);color:var(--verde);margin-bottom:6px}
+ol.steps p{color:var(--ink-2);font-size:16px}
+
+.bene{background:var(--creme-2);padding:clamp(80px,10vw,140px) 0}
+.bene-in{display:grid;grid-template-columns:.9fr 1.3fr;gap:clamp(24px,4vw,64px);margin-top:clamp(36px,4vw,56px);align-items:stretch}
+.bene-pic{border-radius:var(--r);overflow:hidden;min-height:420px;position:relative}
+.bene-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bene .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 36px}
+.bene .grid div{padding:22px 0 24px;border-top:1px solid rgba(12,23,18,.14);display:grid;grid-template-columns:52px 1fr;column-gap:8px}
+.bene .grid div p{grid-column:2}
+.bene .grid i{font:italic 500 28px/1 var(--serif);color:var(--ouro);grid-row:span 2}
+.bene .grid b{display:block;font:600 22px/1.15 var(--serif);color:var(--verde)}
+.bene .grid p{font-size:15px;color:var(--ink-2);margin-top:6px}
+
+.caso{background:var(--verde);color:var(--creme)}
+.caso .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:0;padding:0}
+.caso .pic{min-height:560px;position:relative}
+.caso .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.caso .txt{padding:clamp(48px,7vw,110px) clamp(24px,6vw,96px);display:flex;flex-direction:column;justify-content:center}
+.caso blockquote{font:italic 500 clamp(30px,3.4vw,48px)/1.12 var(--serif);color:var(--creme)}
+.caso blockquote::before{content:"“";display:block;font-size:90px;line-height:.6;color:var(--ouro);margin-bottom:10px}
+.caso p{color:#C8CFC9;margin-top:26px;max-width:32em}
+.caso cite{display:block;font-style:normal;margin-top:24px;color:var(--ouro-2);font-weight:600;font-size:15px}
+
+.posts{padding:clamp(80px,10vw,140px) 0}
+.posts .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);margin-top:clamp(36px,4vw,56px)}
+.posts .grid a{display:block;border-radius:var(--r);overflow:hidden;aspect-ratio:1}
+.posts img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.posts .grid a:hover img{transform:scale(1.03)}
+
+.faq{padding:0 0 clamp(80px,10vw,140px)}
+.faq .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,6vw,96px);align-items:start}
+details{border-bottom:1px solid var(--creme-2)}
+details:first-child{border-top:1px solid var(--creme-2)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:24px 0;font:600 clamp(22px,2vw,26px)/1.15 var(--serif);color:var(--verde)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 30px/1 var(--body);color:var(--ouro);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 24px;color:var(--ink-2);max-width:40em}
+
+.end{background:var(--verde);color:var(--creme);padding:clamp(80px,10vw,140px) 0 0;text-align:center}
+.logo-card{width:min(420px,86%);aspect-ratio:3/2;overflow:hidden;margin:0 auto 44px;border-radius:var(--r);box-shadow:0 0 0 1px rgba(184,149,90,.4)}
+.logo-card img{width:125%;max-width:none;margin:-25.9% 0 0 -12.5%}
+.end h2{color:var(--creme);max-width:13em;margin:0 auto}
+.end .lead{color:#C8CFC9;margin:24px auto 0}
+.end .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.end .btn-line{color:var(--creme)}
+footer{margin-top:clamp(72px,9vw,120px);border-top:1px solid rgba(184,149,90,.2)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:26px;padding-bottom:30px;font-size:13px;color:#98A39C;text-align:left}
+footer a{text-decoration:underline;text-underline-offset:3px}
+
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}*{animation:none!important}}
+
+@media (max-width:1020px){
+  nav.links{display:none}
+  .hero .wrap,.passos .wrap,.faq .wrap,.head,.formas .grid,.panel{grid-template-columns:1fr}
+  .portrait{justify-self:center;width:min(86%,440px);margin-top:10px}
+  .panel .pic{min-height:300px}
+  .bene-in{grid-template-columns:1fr}
+  .bene-pic{min-height:320px}
+  .caso .wrap{grid-template-columns:1fr}
+  .caso .pic{min-height:420px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  header.top .wrap{height:68px}
+  .mark svg{height:38px;width:14px}
+  .mark b{font-size:19px}
+  .mark small{font-size:13px}
+  header.top .btn{height:42px;padding:0 14px;font-size:14px}
+  header.top .btn span{display:none}
+  .cred{gap:16px 24px}
+  .portrait::before{inset:14px -12px -14px 12px}
+  .portrait .sig{left:-8px;bottom:18px;padding:12px 14px}
+  .portrait .sig b{font-size:20px}
+  .chips{gap:8px}
+  .chip{height:44px;padding:0 16px;font-size:14px}
+  .bene .grid{grid-template-columns:1fr}
+  .faixa{min-height:520px}
+  .faixa::before{background:rgba(12,23,18,.66)}
+  .wm{left:auto;right:-30px;height:70%;top:2%}
+  .posts .grid{grid-template-columns:1fr 1fr}
+  .posts .grid a:nth-child(3){display:none}
+  .caso .pic{min-height:340px}
+  .logo-card{width:min(320px,90%)}
+  .panel .btn{align-self:stretch;padding:12px 18px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="coluna" viewBox="0 0 60 170"><path d="M20 2C4 30 2 70 12 104c6 22 12 44 12 64" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/><g fill="currentColor"><circle cx="34" cy="8" r="5.5"/><circle cx="45" cy="10" r="2.6"/><circle cx="38" cy="27" r="5.5"/><circle cx="49" cy="29" r="2.6"/><circle cx="40" cy="47" r="5.5"/><circle cx="51" cy="49" r="2.6"/><circle cx="39" cy="68" r="5.5"/><circle cx="50" cy="70" r="2.6"/><circle cx="37" cy="89" r="5.5"/><circle cx="48" cy="91" r="2.6"/><circle cx="35" cy="110" r="5.5"/><circle cx="46" cy="112" r="2.6"/><circle cx="35" cy="131" r="5.5"/><circle cx="46" cy="133" r="2.6"/><circle cx="37" cy="152" r="5"/><circle cx="47" cy="154" r="2.4"/></g></symbol>
+</svg>
+
+<header class="top"><div class="wrap">
+  <a class="mark" href="#topo" aria-label="Mateus Machado, fisioterapeuta"><svg viewBox="0 0 60 170" style="color:var(--ouro)"><use href="#coluna"/></svg><span><b>MATEUS MACHADO</b><small>Fisioterapeuta</small></span></a>
+  <nav class="links" aria-label="Seções"><a href="#atendimento">Atendimento</a><a href="#onde-doi">Onde dói?</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a></nav>
+  <a class="btn btn-ouro" href="https://wa.me/5548999051191?text=Ol%C3%A1%2C%20Mateus!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.2 1.3Z"/></svg><span>Agendar avaliação</span></a>
+</div></header>
+
+<main id="topo">
+<section class="hero">
+  <svg class="wm" viewBox="0 0 60 170" aria-hidden="true"><use href="#coluna"/></svg>
+  <div class="wrap">
+    <div>
+      <h1><span class="l">Fisioterapia no conforto</span> <span class="l"><em>da sua casa.</em></span></h1>
+      <p class="lead">Sou Mateus Machado, fisioterapeuta. Atendo em domicílio e no consultório quem tem dor, está saindo de uma cirurgia ou precisa voltar a se mover com segurança.</p>
+      <div class="ctas">
+        <a class="btn btn-ouro" href="https://wa.me/5548999051191?text=Ol%C3%A1%2C%20Mateus!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
+        <a class="btn btn-line" href="#onde-doi">Onde está doendo?</a>
+      </div>
+      <div class="cred">
+        <div><b>Domiciliar e clínico</b>vou até você ou você vem até mim</div>
+        <div><b>(48) 99905-1191</b>WhatsApp para agendar</div>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="img/mateus.jpg" alt="Mateus Machado, fisioterapeuta, de jaleco branco" fetchpriority="high">
+      <div class="sig"><b>Mateus Machado</b><span>Fisioterapeuta · CREFITO-10</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="formas" id="atendimento">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Duas formas de <em>cuidar</em> de você</h2>
+      <p class="lead">O tratamento é o mesmo, com avaliação completa e plano individual. Muda só o lugar: escolha o que faz mais sentido para a sua rotina.</p>
+    </div>
+    <div class="grid">
+      <article class="forma rv">
+        <img src="img/idoso.jpg" alt="Cuidadora acompanhando uma senhora idosa" loading="lazy">
+        <div class="b"><h3>Em casa</h3><p>Para quem tem dificuldade de sair, está acamado, em pós-operatório ou prefere o conforto de casa. O treino acontece no lugar onde a pessoa vive, e já serve para a rotina dela.</p>
+        <div class="tags"><span>Idosos e quedas</span><span>Pós-operatório</span><span>Pacientes acamados</span><span>Neurológico</span></div></div>
+      </article>
+      <article class="forma rv">
+        <img src="img/ombro2.jpg" alt="Fisioterapeuta tratando o ombro de uma paciente na maca" loading="lazy">
+        <div class="b"><h3>No consultório</h3><p>Para dores musculares e articulares, lesões e reabilitação de quem pode se deslocar, com avaliação completa e plano de exercícios.</p>
+        <div class="tags"><span>Coluna</span><span>Ombro e joelho</span><span>Lesões esportivas</span><span>Dor crônica</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faixa">
+  <img src="img/casa.jpg" alt="Fisioterapeuta atendendo paciente em cadeira de rodas, em casa" loading="lazy">
+  <div class="wrap rv">
+    <p>A fisioterapia vai até <em>onde o paciente está.</em></p>
+    <span>Atendimento domiciliar em Tubarão e região</span>
+  </div>
+</section>
+
+<section class="dor" id="onde-doi">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Onde está <em>doendo?</em></h2>
+      <p class="lead" style="margin-top:20px">Toque na região e veja como a fisioterapia ajuda. A mensagem para agendar já vai pronta, com o que você sente.</p>
+    </div>
+    <div class="chips rv" role="tablist" aria-label="Região" id="chips"></div>
+    <div class="panel rv" id="panel" role="tabpanel">
+      <div class="pic"><img id="pImg" src="img/coluna.jpg" alt=""></div>
+      <div class="txt" id="pTxt"></div>
+    </div>
+  </div>
+</section>
+
+<section class="passos" id="como-funciona">
+  <div class="wrap">
+    <div class="pics rv">
+      <img src="img/alongamento.jpg" alt="Paciente fazendo alongamento em casa" loading="lazy">
+      <img src="img/joelho.jpg" alt="Fisioterapeuta avaliando o joelho de um paciente" loading="lazy">
+      <img src="img/maos.jpg" alt="Mãos de fisioterapeuta fazendo terapia manual" loading="lazy">
+    </div>
+    <div class="rv">
+      <h2>Como <em>funciona</em></h2>
+      <ol class="steps">
+        <li><div><b>Você me chama</b><p>Pelo WhatsApp, conta o que está sentindo e se prefere atendimento em casa ou no consultório.</p></div></li>
+        <li><div><b>Avaliação</b><p>Na primeira sessão eu avalio, entendo a sua rotina e explico com calma o que está acontecendo.</p></div></li>
+        <li><div><b>Plano de tratamento</b><p>Sessões com objetivo claro e exercícios para continuar fazendo entre uma visita e outra.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="bene">
+  <div class="wrap">
+    <div class="head rv" style="margin-bottom:0">
+      <h2>Por que fazer <em>em casa</em></h2>
+      <p class="lead">Para muita gente, o mais difícil da fisioterapia é chegar até ela. Em casa, o tratamento cabe na vida da pessoa.</p>
+    </div>
+    <div class="bene-in">
+    <div class="bene-pic rv"><img src="img/elastico.jpg" alt="Exercícios com faixa elástica" loading="lazy"></div>
+    <div class="grid rv">
+      <div><i>i.</i><b>Conforto</b><p>Sem trânsito, sem escada, sem sala de espera.</p></div>
+      <div><i>ii.</i><b>Mais adesão</b><p>Quem não precisa se deslocar falta menos e evolui mais rápido.</p></div>
+      <div><i>iii.</i><b>Atenção exclusiva</b><p>A sessão inteira é só sua, do começo ao fim.</p></div>
+      <div><i>iv.</i><b>Treino real</b><p>Levantar da cama, usar o banheiro, subir o degrau da sua casa.</p></div>
+      <div><i>v.</i><b>Família junto</b><p>Quem cuida aprende como ajudar no dia a dia.</p></div>
+      <div><i>vi.</i><b>Autonomia</b><p>O objetivo é depender menos de ajuda, e com segurança.</p></div>
+      <div><i>vii.</i><b>Plano individual</b><p>Fisioterapia não é protocolo padrão. Cada corpo responde de um jeito.</p></div>
+      <div><i>viii.</i><b>Horário flexível</b><p>A gente combina o melhor momento para você.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="caso">
+  <div class="wrap">
+    <div class="pic rv"><img src="img/caso.jpg" alt="Braço de paciente com tala, durante a reabilitação" loading="lazy"></div>
+    <div class="txt rv">
+      <blockquote>Hoje encerramos mais um processo de reabilitação, e não apenas um tratamento.</blockquote>
+      <p>Cada alta é o fim de um caminho feito junto: da dor e da imobilização até a volta para a rotina, com força e confiança.</p>
+      <cite>Mateus Machado, no Instagram</cite>
+    </div>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="wrap">
+    <div class="head rv" style="margin-bottom:0">
+      <h2>Para ler <em>antes</em> da consulta</h2>
+      <p class="lead">Dicas e respostas que eu publico no <a href="https://www.instagram.com/fisio.mateusmchdo/" target="_blank" rel="noopener" style="color:var(--verde);font-weight:700;text-decoration:underline">@fisio.mateusmchdo</a>.</p>
+    </div>
+    <div class="grid rv">
+      <a href="https://www.instagram.com/fisio.mateusmchdo/" target="_blank" rel="noopener"><img src="img/post-quando.jpg" alt="Post: quando procurar um fisioterapeuta?" loading="lazy"></a>
+      <a href="https://www.instagram.com/fisio.mateusmchdo/" target="_blank" rel="noopener"><img src="img/post-dor.jpg" alt="Post: dor persistente" loading="lazy"></a>
+      <a href="https://www.instagram.com/fisio.mateusmchdo/" target="_blank" rel="noopener"><img src="img/post-beneficios.jpg" alt="Post: benefícios da fisioterapia domiciliar" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="duvidas">
+  <div class="wrap">
+    <div class="rv"><h2>Dúvidas <em>comuns</em></h2><p class="lead" style="margin-top:18px">Se a sua não estiver aqui, me chama no WhatsApp.</p></div>
+    <div class="rv">
+      <details open><summary>Preciso de pedido médico?</summary><p>Não é obrigatório para começar. Se você tiver exames ou o relatório da cirurgia, separe para a avaliação: eles ajudam a montar o plano.</p></details>
+      <details><summary>Quanto tempo dura cada sessão?</summary><p>Em média 50 minutos. A frequência, de uma a três vezes por semana, é definida na avaliação conforme o seu objetivo.</p></details>
+      <details><summary>Em quais cidades faz atendimento em casa?</summary><p>Tubarão e cidades da região. Me mande o seu bairro pelo WhatsApp que eu confirmo o atendimento e os horários.</p></details>
+      <details><summary>Preciso ter algum aparelho em casa?</summary><p>Não. Eu levo o material necessário para a sessão e adapto os exercícios ao que existe na sua casa.</p></details>
+      <details><summary>Atende por convênio?</summary><p>O atendimento é particular. Eu forneço recibo para você pedir reembolso ao seu plano, se ele oferecer.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="end">
+  <div class="wrap">
+    <div class="logo-card rv"><img src="img/marca.jpg" alt="Logo Mateus Machado, fisioterapeuta domiciliar"></div>
+    <h2 class="rv">Agende sua avaliação <em>no conforto da sua casa.</em></h2>
+    <p class="lead rv">Mande uma mensagem dizendo o que você sente e onde mora. Respondo com os horários disponíveis.</p>
+    <div class="ctas rv">
+      <a class="btn btn-ouro" href="https://wa.me/5548999051191?text=Ol%C3%A1%2C%20Mateus!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn btn-line" href="https://www.instagram.com/fisio.mateusmchdo/" target="_blank" rel="noopener">Ver o Instagram</a>
+    </div>
+  </div>
+  <footer><div class="wrap"><span>Mateus Machado · Fisioterapeuta clínico e domiciliar · CREFITO-10</span><span>Fotos ilustrativas: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> · Site por Evoly</span></div></footer>
+</section>
+</main>
+
+<script>
+const WA="https://wa.me/5548999051191?text=";
+const D=[
+ {k:"Coluna",img:"coluna.jpg",t:"Dor na coluna",q:"Lombar travada, dor que desce para a perna, dor de quem passa o dia sentado.",l:["Avaliação da postura e de como você se movimenta","Terapia manual para aliviar a dor","Fortalecimento do core para a dor não voltar"],m:"Estou com dor na coluna"},
+ {k:"Pescoço",img:"pescoco.jpg",t:"Dor no pescoço",q:"Torcicolo, tensão de estresse, dor de cabeça que começa na nuca.",l:["Liberação da musculatura do pescoço e ombros","Exercícios de mobilidade para o dia a dia","Ajustes simples na rotina e no trabalho"],m:"Estou com dor no pescoço"},
+ {k:"Ombro",img:"ombro.jpg",t:"Dor no ombro",q:"Dor para levantar o braço, tendinite, bursite, ombro que trava.",l:["Recuperação do movimento sem dor","Fortalecimento dos músculos que estabilizam o ombro","Volta segura ao treino ou ao trabalho"],m:"Estou com dor no ombro"},
+ {k:"Joelho",img:"joelho.jpg",t:"Dor no joelho",q:"Dor para subir escada, artrose, lesão de menisco ou ligamento.",l:["Alívio da dor e do inchaço","Fortalecimento de coxa e quadril","Treino de escada, agachar e caminhar"],m:"Estou com dor no joelho"},
+ {k:"Tornozelo",img:"tornozelo.jpg",t:"Tornozelo e pé",q:"Entorse que não sara, fascite plantar, insegurança para pisar.",l:["Controle da dor e do inchaço","Treino de equilíbrio","Retorno gradual à caminhada e ao esporte"],m:"Estou com dor no tornozelo/pé"},
+ {k:"Pós-operatório",img:"posop.jpg",t:"Pós-operatório",q:"Prótese de joelho ou quadril, cirurgia de ombro, coluna ou fratura.",l:["Começo da reabilitação em casa, logo após a alta","Ganho de movimento e de força com segurança","Acompanhamento até a volta à rotina"],m:"Fiz uma cirurgia e preciso de fisioterapia pós-operatória"},
+ {k:"Idoso e quedas",img:"idosos-grupo.jpg",t:"Idosos e prevenção de quedas",q:"Fraqueza nas pernas, medo de cair, dificuldade para levantar e caminhar.",l:["Avaliação do risco de queda dentro de casa","Treino de força, equilíbrio e marcha","Orientação para a família e para quem cuida"],m:"Quero fisioterapia para um idoso (prevenção de quedas)"}
+];
+const $=id=>document.getElementById(id);
+$("chips").innerHTML=D.map((d,i)=>`<button class="chip" role="tab" aria-selected="${i===0}" data-i="${i}">${d.k}</button>`).join("");
+function show(i,anim){const d=D[i];
+  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-selected",+c.dataset.i===i));
+  const img=$("pImg");
+  if(anim){img.style.opacity=0;setTimeout(()=>{img.src="img/"+d.img;img.alt=d.t;img.style.opacity=1},180)}else{img.src="img/"+d.img;img.alt=d.t}
+  $("pTxt").innerHTML=`<div class="${anim?'fade':''}"><h3>${d.t}</h3><p class="q">${d.q}</p><ul>${d.l.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+   <a class="btn btn-verde" href="${WA+encodeURIComponent(`Olá, Mateus! ${d.m}. Queria agendar uma avaliação.`)}" target="_blank" rel="noopener">Agendar avaliação</a>`;
+}
+$("chips").addEventListener("click",e=>{const c=e.target.closest(".chip");if(c)show(+c.dataset.i,true)});
+show(0,false);
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12,rootMargin:"0px 0px -5% 0px"});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
